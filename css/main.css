@@ -5,6 +5,7 @@
   --accent-cl: #2196f3;
   --dark-bg-cl: #2f303a;
   --team-button-bg: #f5f4fa;
+  --footer-link-cl: color: rgba(255, 255, 255, 0.6);
 
   --main-font: 'Roboto', sans-serif;
   --logo-font: 'Raleway', sans-serif;
@@ -19,7 +20,6 @@ team-block color, background button: #F5F4FA;
 */
 
 body {
-  background-color: var(--main-cl);
   font-family: var(--main-font);
   font-style: normal;
   font-weight: normal;
@@ -30,13 +30,19 @@ body {
 }
 
 .link {
-  color: inherit;
+  color: var(--title-cl);
   text-decoration: none; /*убираем подчеркивание ссылок*/
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
-.link:hover,
-.link:focus {
-  color: var(--accent-cl);
+.studio{
+  color:var(--accent-cl);
+}
+
+.contacts .link{
+  color:var(--main-txt-cl);
 }
 
 .logo {
@@ -50,13 +56,6 @@ body {
 
 span {
   color: var(--accent-cl);
-}
-
-.header {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
 
 /*убираем маркировку списка*/
@@ -157,4 +156,13 @@ footer .logo {
 /*убираем курсив в футере, путем наследования стилей от родителя*/
 .address {
   font-style: inherit;
+}
+
+.address .link{
+  color:var(--footer-link-cl)
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-cl);
 }
